@@ -104,3 +104,160 @@ Before running regression models, the dataset will be reviewed for:
 * Outliers in key numerical variables
 
 A cleaned dataset and dummy-variable dataset will be created for regression analysis while preserving the original data.
+
+
+
+# Regression Approach
+
+Three regression models were developed to evaluate factors associated with monthly sales.
+
+## Simple Regression Model 1
+
+Dependent Variable:
+
+* Monthly Sales
+
+Independent Variable:
+
+* Marketing Spend
+
+Results:
+
+* R² = 0.1672
+
+Marketing Spend showed a positive and statistically significant relationship with Monthly Sales.
+
+## Simple Regression Model 2
+
+Dependent Variable:
+
+* Monthly Sales
+
+Independent Variable:
+
+* Footfall
+
+Results:
+
+* R² = 0.7363
+
+Footfall showed a strong positive and statistically significant relationship with Monthly Sales.
+
+## Multiple Regression Model
+
+Dependent Variable:
+
+* Monthly Sales
+
+Independent Variables:
+
+* Marketing Spend
+* Footfall
+* Average Discount Percentage
+* Inventory Availability Percentage
+* Region_North
+
+Results:
+
+* R² = 0.8067
+* Adjusted R² = 0.8037
+
+The multiple regression model provided the strongest explanatory power and was selected as the final model.
+
+# Dummy Variable Approach
+
+Categorical variables were converted into dummy variables before regression analysis.
+
+## Region
+
+Original categories:
+
+* East
+* North
+* South
+* West
+
+Dummy variables created:
+
+* Region_East
+* Region_North
+* Region_South
+
+Reference category:
+
+* West
+
+## Store Type
+
+Original categories:
+
+* Airport
+* High Street
+* Mall
+* Residential
+
+Dummy variables created:
+
+* Store_Airport
+* Store_HighStreet
+* Store_Mall
+
+Reference category:
+
+* Residential
+
+Reference categories were excluded to avoid multicollinearity and the dummy variable trap.
+
+# Model Comparison Summary
+
+| Model               | Independent Variables                                                             | R²     |
+| ------------------- | --------------------------------------------------------------------------------- | ------ |
+| Simple Regression 1 | Marketing Spend                                                                   | 0.1672 |
+| Simple Regression 2 | Footfall                                                                          | 0.7363 |
+| Multiple Regression | Marketing Spend, Footfall, Avg Discount %, Inventory Availability %, Region_North | 0.8067 |
+
+The Multiple Regression Model achieved the highest explanatory power and was selected as the final model.
+
+# Final Model Selected
+
+The Multiple Regression Model was selected because:
+
+* Highest R² value
+* Includes multiple business drivers
+* Explains approximately 80.7% of variation in monthly sales
+* Provides stronger decision support than simple regression models
+
+# Business Recommendation
+
+The analysis suggests that leadership should focus on:
+
+1. Increasing customer footfall.
+2. Investing in effective marketing activities.
+3. Maintaining high inventory availability.
+4. Identifying operational best practices from high-performing stores.
+
+Footfall, Marketing Spend, and Inventory Availability showed the strongest positive association with Monthly Sales.
+
+Average Discount Percentage and Region_North were not statistically significant and should not be heavily relied upon for decision-making.
+
+# Assumptions and Limitations
+
+Several limitations should be considered:
+
+* Regression identifies association rather than causation.
+* Some business factors affecting sales may not be included in the dataset.
+* Local market conditions and operational differences may influence performance.
+* Residual analysis identified stores that performed significantly above or below model expectations.
+
+The model should be used as a decision-support tool rather than a perfect forecasting system.
+
+# Screenshots Included
+
+The repository includes the following screenshots:
+
+* simple_regression_output.png
+* multiple_regression_output.png
+* residuals_preview.png
+* model_comparison_preview.png
+
+These screenshots provide evidence of the regression analysis, model comparison, and residual calculations performed during the project.
