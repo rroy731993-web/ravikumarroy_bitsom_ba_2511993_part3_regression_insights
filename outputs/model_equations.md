@@ -68,3 +68,23 @@ Monthly Sales = 560777.35 + 2.13 × Marketing Spend
 Marketing Spend has a positive and statistically significant relationship with Monthly Sales. On average, every additional unit of marketing spend is associated with an increase of approximately 2.13 units in monthly sales.
 
 Although significant, this model explains only 16.7% of sales variation, indicating that additional business factors should be included in a more comprehensive model.
+
+
+
+## Simple Regression Model 2
+
+### Model
+
+Monthly Sales = 446410.58 + 35.68 × Footfall
+
+### Results
+
+* R² = 0.7363
+* Footfall Coefficient = 35.68
+* P-value = 4.75E-94
+
+### Business Interpretation
+
+Footfall has a strong positive and statistically significant relationship with Monthly Sales. Each additional customer visit is associated with approximately 35.68 units of additional monthly sales.
+
+This model explains approximately 73.6% of the variation in sales, making Footfall a substantially stronger predictor than Marketing Spend.
